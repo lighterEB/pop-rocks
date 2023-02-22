@@ -11,7 +11,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan("com.tosix7.poprocks.**.dao")
+@MapperScan("com.tosix7.poprocks.**.mapper")
 public class MybatisConfig {
 
     @Autowired
@@ -24,7 +24,7 @@ public class MybatisConfig {
         sessionFactory.setTypeAliasesPackage("com.tosix7.poprocks.**.model");
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/mapper/*.xml"));
 
         return sessionFactory.getObject();
     }
