@@ -7,7 +7,7 @@ import java.util.List;
 public interface SysUserService {
 
     /**
-     * 查询所有
+     * 查询所有用户
      * @return
      */
     List<SysUser> findAll();
