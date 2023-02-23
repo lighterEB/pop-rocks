@@ -5,10 +5,11 @@ spring:
     path match:
       matching-strategy: ant_path_matcher
   datasource:
-    url: jdbc:mysql://10.211.55.5:3306/pop_rocks?useSSL=false&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://10.211.55.5:3306/pop_rocks?useSSL=false&useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowPublicKeyRetrieval=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    #url: jdbc:mysql://10.211.55.5:3306/pop_rocks?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: password
-    name: root
+    username: root
 server:
   port: 8081
 
