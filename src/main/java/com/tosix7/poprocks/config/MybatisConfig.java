@@ -24,7 +24,7 @@ public class MybatisConfig {
         sessionFactory.setTypeAliasesPackage("com.tosix7.poprocks.**.model");
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sessionFactory.setMapperLocations(resolver.getResources("classpath:/mapper/**/*.xml"));
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:/mapper/**/*.xml"));
 
         return sessionFactory.getObject();
     }
